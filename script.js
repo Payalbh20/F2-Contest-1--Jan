@@ -8,20 +8,36 @@ let arr = [
 
 function PrintDeveloperswithMap() {
   //Write your code here
+  arr.map(function (e) {
+    if(e.profession === "developer"){
+      console.log(e);
+    }
+  });
 }
 
 function PrintDeveloperbyForEach() {
-  //Write your code here
+   arr.forEach(function (e) {
+    if(e.profession === "developer"){
+      console.log(e);
+    }
+   });
 }
 
 function addData() {
-  //Write your code here
+ arr.push({id:4,name:"susan",age:"20",profession:"intern"});
+ console.log(arr);
+
 }
 
 function removeAdmin() {
   //Write your code here
+ let removeAdmin = arr.filter((arr) => arr.profession!== "admin");
+ console.log(removeAdmin);
 }
 
+let NewArray = [{id:5,name:"Riti",age:"22",profession:"progremmer"},{id:6, name:"Anklet",age:"23", profession:"bank so"},{id:7, name:"payal", age:"35",profession:"pilot"}]
 function concatenateArray() {
-  //Write your code here
+ let ans = arr.concat(NewArray);
+ console.log(ans);
+ 
 }
